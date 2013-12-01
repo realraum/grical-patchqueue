@@ -1,0 +1,10 @@
+# HG changeset patch
+# Parent 94422dee5a6cc4fd0f68937d5e51f0ead2c7e14f
+
+diff --git a/m b/m
+new file mode 120000
+--- /dev/null
++++ b/m
+@@ -0,0 +1,1 @@
++grical/media
+\ No newline at end of file

@@ -1,0 +1,18 @@
+# HG changeset patch
+# Parent ec3307ee2f499c75573748fd39843e3fdd5d6ad0
+diff -r ec3307ee2f49 -r 054c3747b695 grical/events/views.py
+--- a/grical/events/views.py	Sat Aug 24 02:06:46 2013 +0200
++++ b/grical/events/views.py	Tue Aug 27 15:16:13 2013 +0200
+@@ -1187,6 +1187,12 @@
+     # query, we prioritize /s/?query= in the url but if not present we accept
+     # /s/query
+     query = request.GET.get('query', query)
++
++    if query == "@Graz,AT":
++        query = "@Graz"
++    if query == "Graz,AT":
++        query = "Graz"
++
+     # view
+     view = request.GET.get('view', 'boxes')
+     # shows the homepage with a message if no query, except when view=json

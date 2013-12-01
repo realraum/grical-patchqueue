@@ -1,0 +1,52 @@
+# HG changeset patch
+# Parent a0a64bae16e73f79eb4dfbd628700bbf91b03d36
+
+diff -r a0a64bae16e7 grical/settings_debug.py
+--- a/grical/settings_debug.py	Tue Jul 03 01:01:52 2012 +0200
++++ b/grical/settings_debug.py	Tue Jul 03 01:05:15 2012 +0200
+@@ -1,25 +1,25 @@
+ from settings_base import *
+ 
+-DEBUG = True
+-TEMPLATE_DEBUG = True
+-TEMPLATE_STRING_IF_INVALID = 'STRING_NOT_SET'
+-MIDDLEWARE_CLASSES = (MIDDLEWARE_CLASSES[0], 
+-                      'debug_toolbar.middleware.DebugToolbarMiddleware'
+-                     ) + MIDDLEWARE_CLASSES[1:]
+-MIDDLEWARE_CLASSES += (
+-    'grical.middlewares.ProfileMiddleware', )
+-INSTALLED_APPS = ('debug_toolbar',) + INSTALLED_APPS
+-DEBUG_TOOLBAR_PANELS = (
+-    'debug_toolbar.panels.version.VersionDebugPanel',
+-    'debug_toolbar.panels.timer.TimerDebugPanel',
+-    # 'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel', # shows passwords !!!
+-    'debug_toolbar.panels.headers.HeaderDebugPanel',
+-    'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
+-    'debug_toolbar.panels.template.TemplateDebugPanel',
+-    'debug_toolbar.panels.sql.SQLDebugPanel',
+-    'debug_toolbar.panels.signals.SignalDebugPanel',
+-    'debug_toolbar.panels.logger.LoggingPanel',
+-)
++DEBUG = False
++TEMPLATE_DEBUG = False
++#TEMPLATE_STRING_IF_INVALID = 'STRING_NOT_SET'
++#MIDDLEWARE_CLASSES = (MIDDLEWARE_CLASSES[0], 
++#                      'debug_toolbar.middleware.DebugToolbarMiddleware'
++#                     ) + MIDDLEWARE_CLASSES[1:]
++#MIDDLEWARE_CLASSES += (
++#    'grical.middlewares.ProfileMiddleware', )
++#INSTALLED_APPS = ('debug_toolbar',) + INSTALLED_APPS
++#DEBUG_TOOLBAR_PANELS = (
++#    'debug_toolbar.panels.version.VersionDebugPanel',
++#    'debug_toolbar.panels.timer.TimerDebugPanel',
++#    # 'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel', # shows passwords !!!
++#    'debug_toolbar.panels.headers.HeaderDebugPanel',
++#    'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
++#    'debug_toolbar.panels.template.TemplateDebugPanel',
++#    'debug_toolbar.panels.sql.SQLDebugPanel',
++#    'debug_toolbar.panels.signals.SignalDebugPanel',
++#    'debug_toolbar.panels.logger.LoggingPanel',
++#)
+ # don't show the toolbar if the profiler
+ #   grical.middlewares.ProfileMiddleware
+ # is used, which happens when adding ?profile=1 to the request

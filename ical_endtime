@@ -1,0 +1,30 @@
+# HG changeset patch
+# Parent 054c3747b6957662fabfa7837ac78952d50be72c
+
+diff -r 054c3747b695 grical/events/models.py
+--- a/grical/events/models.py	Tue Aug 27 15:16:13 2013 +0200
++++ b/grical/events/models.py	Sun Dec 01 23:04:05 2013 +0100
+@@ -1116,12 +1116,12 @@
+                 + unicode(self.id) + u'@' + \
+                 Site.objects.get_current().domain
+         # calculate DTEND
+-        if self.enddate and self.enddate != self.startdate:
++        if (self.enddate and self.enddate != self.startdate) or (self.endtime and self.endtime != self.starttime):
+             # rfc2445 (iCalendar) indicates that:
+             # - DTEND can be omitted when equals DTSTART
+             # - DTEND specifies the non-inclusive end of the event
+-            enddate = self.enddate + datetime.timedelta(days=1)
+             if self.endtime:
++                enddate = self.enddate if self.enddate else self.startdate
+                 date_time = datetime.datetime.combine(
+                         enddate, self.endtime )
+                 if self.timezone:
+@@ -1130,7 +1130,7 @@
+                     date_time = loc_dt.astimezone( pytz.utc )
+                 vevent.add('DTEND').value = date_time
+             else:
+-                vevent.add('DTEND').value = enddate
++                vevent.add('DTEND').value = self.enddate + datetime.timedelta(days=1)
+         # calculate DESCRIPTION
+         if self.description: vevent.add('DESCRIPTION').value = self.description
+         # see rfc5545 3.8.7.2. Date-Time Stamp

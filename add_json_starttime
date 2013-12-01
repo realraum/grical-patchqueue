@@ -1,0 +1,14 @@
+# HG changeset patch
+# Parent 306a03f82348ca526276c0e5a1b0742d6c554af2
+
+diff -r 306a03f82348 grical/events/views.py
+--- a/grical/events/views.py	Fri Jun 22 15:41:44 2012 +0200
++++ b/grical/events/views.py	Tue Jul 03 01:01:04 2012 +0200
+@@ -1286,6 +1286,7 @@
+                     'start': e.start,
+                     'tags': e.tags,
+                     'upcoming': e.upcoming,
++                    'starttime': e.starttime,
+                     'url': 'http://' + domain + e.get_absolute_url(),
+                     # see https://en.wikipedia.org/wiki/GeoJSON
+                     'geometry': e.coordinates

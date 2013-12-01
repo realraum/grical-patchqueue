@@ -1,0 +1,29 @@
+# HG changeset patch
+# Parent ce4f14789a5be4e86db2f9ac05a168209745c18d
+diff -r ce4f14789a5b -r 866aea4738b9 grical/events/forms.py
+--- a/grical/events/forms.py	Thu Aug 15 15:00:34 2013 +0200
++++ b/grical/events/forms.py	Thu Aug 15 16:37:25 2013 +0200
+@@ -134,13 +134,9 @@
+         'invalid': _(u'Enter a valid URL.'),
+         'invalid_link': _(u'This URL appears to be a broken link.'),
+     }
+-    def __init__(self, verify_exists=False,
+-            validator_user_agent=validators.URL_VALIDATOR_USER_AGENT,
+-            *args, **kwargs):
++    def __init__(self, *args, **kwargs):
+         super(URLFieldExtended, self).__init__( *args, **kwargs )
+-        self.validators.append( URLValidatorExtended(
+-            verify_exists=verify_exists,
+-            validator_user_agent=validator_user_agent ) )
++        self.validators.append( URLValidatorExtended(  ) )
+ 
+     def to_python(self, value):
+         value = value.strip()
+@@ -632,7 +628,6 @@
+             required = False )
+     when = DatesTimesField()
+     web = URLFieldExtended(
+-            verify_exists=True,
+             max_length = get_field_attr( 'EventURL', 'url', 'max_length' ) )
+     class Media:
+         js = (

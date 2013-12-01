@@ -1,0 +1,25 @@
+# HG changeset patch
+# Parent 7e4e84214197aebf4c79a8cebe805de2e11ff7af
+
+diff -r 7e4e84214197 grical/templates/legal_notice.html
+--- a/grical/templates/legal_notice.html	Tue Jul 03 04:03:46 2012 +0200
++++ b/grical/templates/legal_notice.html	Tue Jul 03 12:46:05 2012 +0200
+@@ -20,17 +20,9 @@
+     Email: office ät gridmind.org
+ </pre>
+ 
+-<p>{% blocktrans %}
+-Value added tax identification number (in Germany called
+-<tt>Umsatzsteuer-Identifikationsnummer</tt>) according to German law <tt>§ 27 a
+-    Umsatzsteuergesetz</tt>: DE270095377
+-{% endblocktrans %}
+-</p>
+-
+ <p>
+ {% blocktrans %}
+-Responsible for the content according to German law <tt>§ 55 Abs. 2 RStV</tt>: Ivan Fernando
+-Villanueva Barrio (address as before)
++Responsible for the content according to German law <tt>§ 55 Abs. 2 RStV</tt>: Verein wirdorange, Jakoministraße 16, 8010 Graz, Austria 
+ {% endblocktrans %}
+ </p>
+ 

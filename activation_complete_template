@@ -1,0 +1,17 @@
+# HG changeset patch
+# Parent 866aea4738b99eda90556eac69c1937528b7cb50
+diff -r 866aea4738b9 -r ec3307ee2f49 grical/templates/registration/activation_complete.html
+--- /dev/null	Thu Jan 01 00:00:00 1970 +0000
++++ b/grical/templates/registration/activation_complete.html	Sat Aug 24 02:06:46 2013 +0200
+@@ -0,0 +1,11 @@
++{% extends "base.html" %}
++{% load i18n %}
++
++{% block title %}
++activation_complete.html | {{ block.super }}
++{% endblock %}
++
++{% block container %}
++<br />
++{% trans "Thank you for signing up." %}.
++{% endblock %}
