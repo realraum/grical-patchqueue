@@ -1,9 +1,9 @@
 # HG changeset patch
-# Parent 7e4e84214197aebf4c79a8cebe805de2e11ff7af
+# Parent cbc6f263949933351ffad14ee8624e9cf306c32c
 
-diff -r 7e4e84214197 grical/templates/legal_notice.html
---- a/grical/templates/legal_notice.html	Tue Jul 03 04:03:46 2012 +0200
-+++ b/grical/templates/legal_notice.html	Tue Jul 03 12:46:05 2012 +0200
+diff -r cbc6f2639499 grical/templates/legal_notice.html
+--- a/grical/templates/legal_notice.html	Thu Aug 15 14:55:49 2013 +0200
++++ b/grical/templates/legal_notice.html	Sun Dec 01 23:31:29 2013 +0100
 @@ -20,17 +20,9 @@
      Email: office ät gridmind.org
  </pre>
@@ -19,7 +19,7 @@ diff -r 7e4e84214197 grical/templates/legal_notice.html
  {% blocktrans %}
 -Responsible for the content according to German law <tt>§ 55 Abs. 2 RStV</tt>: Ivan Fernando
 -Villanueva Barrio (address as before)
-+Responsible for the content according to German law <tt>§ 55 Abs. 2 RStV</tt>: Verein wirdorange, Jakoministraße 16, 8010 Graz, Austria 
++Responsible for the content according to Austrian law: realraum - Verein für Technik in Kultur und Gesellschaft, Brockmanngasse 15, 8010 Graz, Austria
  {% endblocktrans %}
  </p>
  
