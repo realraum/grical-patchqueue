@@ -3,7 +3,7 @@
 
 diff -r cbc6f2639499 grical/templates/legal_notice.html
 --- a/grical/templates/legal_notice.html	Thu Aug 15 14:55:49 2013 +0200
-+++ b/grical/templates/legal_notice.html	Sun Dec 01 23:31:29 2013 +0100
++++ b/grical/templates/legal_notice.html	Tue Dec 03 17:08:09 2013 +0100
 @@ -20,17 +20,9 @@
      Email: office ät gridmind.org
  </pre>
@@ -20,6 +20,16 @@ diff -r cbc6f2639499 grical/templates/legal_notice.html
 -Responsible for the content according to German law <tt>§ 55 Abs. 2 RStV</tt>: Ivan Fernando
 -Villanueva Barrio (address as before)
 +Responsible for the content according to Austrian law: realraum - Verein für Technik in Kultur und Gesellschaft, Brockmanngasse 15, 8010 Graz, Austria
+ {% endblocktrans %}
+ </p>
+ 
+@@ -50,7 +42,8 @@
+ that nothing found here has necessarily been reviewed by people with the expertise required to 
+ provide you with complete, accurate or reliable information. You can find more about the project at
+ <a href="http://code.grical.org">the GridCalendar's project page</a>
+-
++<br/>
++All our patches applied on top of the grical repository can be found <a href="https://svn.spreadspace.org/realraum/grical-patchqueue/">here</a>.
  {% endblocktrans %}
  </p>
  
